@@ -1199,3 +1199,558 @@ Func glNormal3s($nx, $ny, $nz)
     DllCall($__g_hGLDll, "NONE", "glNormal3s", $GLshort, $nx, $GLshort, $ny, $GLshort, $nz)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+Func glNormal3bv($v)
+    DllCall($__g_hGLDll, "NONE", "glNormal3bv", $GLbyte, $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glNormal3dv($v)
+    DllCall($__g_hGLDll, "NONE", "glNormal3dv", $GLdouble, $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glNormal3fv($v)
+    DllCall($__g_hGLDll, "NONE", "glNormal3fv", $GLfloat, $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glNormal3iv($v)
+    DllCall($__g_hGLDll, "NONE", "glNormal3iv", $GLint, $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glNormal3sv($v)
+    DllCall($__g_hGLDll, "NONE", "glNormal3sv", $GLshort, $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexd($c)
+    DllCall($__g_hGLDll, "NONE", "glIndexd", $GLdouble, $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexf($c)
+    DllCall($__g_hGLDll, "NONE", "glIndexf", $GLfloat, $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexi($c)
+    DllCall($__g_hGLDll, "NONE", "glIndexi", $GLint, $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexs($c)
+    DllCall($__g_hGLDll, "NONE", "glIndexs", $GLshort, $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexub($c)
+    DllCall($__g_hGLDll, "NONE", "glIndexub", $GLubyte, $c); 1.1
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexdv()
+    DllCall($__g_hGLDll, "NONE", "glIndexdv", "PTR", $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexfv()
+    DllCall($__g_hGLDll, "NONE", "glIndexfv", "PTR", $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexiv()
+    DllCall($__g_hGLDll, "NONE", "glIndexiv", "PTR", $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexsv()
+    DllCall($__g_hGLDll, "NONE", "glIndexsv", "PTR", $c)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexubv()
+    DllCall($__g_hGLDll, "NONE", "glIndexubv", "PTR", $c); 1.1
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3b($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3b", $GLbyte, $red, $GLbyte, $green, $GLbyte, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3d($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3d", $GLdouble, $red, $GLdouble, $green, $GLdouble, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3f($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3f", $GLfloat, $red, $GLfloat, $green, $GLfloat, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3i($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3i", $GLint, $red, $GLint, $green, $GLint, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3s($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3s", $GLshort, $red, $GLshort, $green, $GLshort, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3ub($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3ub", $GLubyte, $red, $GLubyte, $green, $GLubyte, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3ui($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3ui", $GLuint, $red, $GLuint, $green, $GLuint, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3us($red, $green, $blue)
+    DllCall($__g_hGLDll, "NONE", "glColor3us", $GLushort, $red, $GLushort, $green, $GLushort, $blue)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4b($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4b", $GLbyte, $red, $GLbyte, $green, $GLbyte, $blue, $GLbyte, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4d($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4d", $GLdouble, $red, $GLdouble, $green, $GLdouble, $blue, $GLdouble, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4f($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4f", $GLfloat, $red, $GLfloat, $green, $GLfloat, $blue, $GLfloat, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4i($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4i", $GLint, $red, $GLint, $green, $GLint, $blue, $GLint, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4s($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4s", $GLshort, $red, $GLshort, $green, $GLshort, $blue, $GLshort, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4ub($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4ub", $GLubyte, $red, $GLubyte, $green, $GLubyte, $blue, $GLubyte, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4ui($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4ui", $GLuint, $red, $GLuint, $green, $GLuint, $blue, $GLuint, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4us($red, $green, $blue, $alpha)
+    DllCall($__g_hGLDll, "NONE", "glColor4us", $GLushort, $red, $GLushort, $green, $GLushort, $blue, $GLushort, $alpha)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3bv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3bv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3dv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3fv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3iv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3sv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3ubv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3ubv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3uiv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3uiv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor3usv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor3usv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4bv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4bv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4dv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4fv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4iv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4sv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4ubv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4ubv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4uiv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4uiv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColor4usv($v)
+    DllCall($__g_hGLDll, "NONE", "glColor4usv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1d($s)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1d", $GLdouble, $s)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1f($s)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1f", $GLfloat, $s)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1i($s)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1i", $GLint, $s)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1s($s)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1s", $GLshort, $s)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2d($s, $t)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2d", $GLdouble, $s, $GLdouble, $t)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2f($s, $t)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2f", $GLfloat, $s, $GLfloat, $t)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2i($s, $t)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2i", $GLint, $s, $GLint, $t)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2s($s, $t)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2s", $GLshort, $s, $GLshort, $t)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3d($s, $t, $r)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3d", $GLdouble, $s, $GLdouble, $t, $GLdouble, $r)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3f($s, $t, $r)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3f", $GLfloat, $s, $GLfloat, $t, $GLfloat, $r)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3i($s, $t, $r)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3i", $GLint, $s, $GLint, $t, $GLint, $r)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3s($s, $t, $r)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3s", $GLshort, $s, $GLshort, $t, $GLshort, $r)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4d($s, $t, $r, $q)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4d", $GLdouble, $s, $GLdouble, $t, $GLdouble, $r, $GLdouble, $q)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4f($s, $t, $r, $q)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4f", $GLfloat, $s, $GLfloat, $t, $GLfloat, $r, $GLfloat, $q)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4i($s, $t, $r, $q)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4i", $GLint, $s, $GLint, $t, $GLint, $r, $GLint, $q)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4s($s, $t, $r, $q)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4s", $GLshort, $s, $GLshort, $t, $GLshort, $r, $GLshort, $q)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1dv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1fv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1iv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord1sv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord1sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2dv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2fv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2iv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord2sv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord2sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3dv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3fv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3iv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord3sv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord3sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4dv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4fv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4iv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoord4sv($v)
+    DllCall($__g_hGLDll, "NONE", "glTexCoord4sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2d($x, $y)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2d", $GLdouble, $x, $GLdouble, $y)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2f($x, $y)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2f", $GLfloat, $x, $GLfloat, $y)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2i($x, $y)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2i", $GLint, $x, $GLint, $y)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2s($x, $y)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2s", $GLshort, $x, $GLshort, $y)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3d($x, $y, $z)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3d", $GLdouble, $x, $GLdouble, $y, $GLdouble, $z)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3f($x, $y, $z)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3f", $GLfloat, $x, $GLfloat, $y, $GLfloat, $z)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3i($x, $y, $z)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3i", $GLint, $x, $GLint, $y, $GLint, $z)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3s($x, $y, $z)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3s", $GLshort, $x, $GLshort, $y, $GLshort, $z)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4d($x, $y, $z, $w)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4d", $GLdouble, $x, $GLdouble, $y, $GLdouble, $z, $GLdouble, $w)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4f($x, $y, $z, $w)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4f", $GLfloat, $x, $GLfloat, $y, $GLfloat, $z, $GLfloat, $w)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4i($x, $y, $z, $w)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4i", $GLint, $x, $GLint, $y, $GLint, $z, $GLint, $w)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4s($x, $y, $z, $w)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4s", $GLshort, $x, $GLshort, $y, $GLshort, $z, $GLshort, $w)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2dv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2fv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2iv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos2sv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos2sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3dv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3fv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3iv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos3sv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos3sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4dv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4dv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4fv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4fv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4iv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4iv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRasterPos4sv($v)
+    DllCall($__g_hGLDll, "NONE", "glRasterPos4sv", "PTR", $v)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectd($x1, $y1, $x2, $y2)
+    DllCall($__g_hGLDll, "NONE", "glRectd", $GLdouble, $x1, $GLdouble, $y1, $GLdouble, $x2, $GLdouble, $y2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectf($x1, $y1, $x2, $y2)
+    DllCall($__g_hGLDll, "NONE", "glRectf", $GLfloat, $x1, $GLfloat, $y1, $GLfloat, $x2, $GLfloat, $y2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRecti($x1, $y1, $x2, $y2)
+    DllCall($__g_hGLDll, "NONE", "glRecti", $GLint, $x1, $GLint, $y1, $GLint, $x2, $GLint, $y2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRects($x1, $y1, $x2, $y2)
+    DllCall($__g_hGLDll, "NONE", "glRects", $GLshort, $x1, $GLshort, $y1, $GLshort, $x2, $GLshort, $y2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectdv($v1, $v2)
+    DllCall($__g_hGLDll, "NONE", "glRectdv", "PTR", $v1, "PTR", $v2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectfv($v1, $v2)
+    DllCall($__g_hGLDll, "NONE", "glRectfv", "PTR", $v1, "PTR", $v2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectiv($v1, $v2)
+    DllCall($__g_hGLDll, "NONE", "glRectiv", "PTR", $v1, "PTR", $v2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glRectsv($v1, $v2)
+    DllCall($__g_hGLDll, "NONE", "glRectsv", "PTR", $v1, "PTR", $v2)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
