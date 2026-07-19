@@ -711,21 +711,6 @@ Func glPolygonStipple($mask)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
 
-Func glPolygonMode($face, $mode)
-    Local $aRet = DllCall($__g_hGLDll, "NONE", "glPolygonMode", $GLenum, $face, $GLenum, $mode)
-    If @error<>0 Then Return SetError(@error, @extended, Null)
-EndFunc
-
-Func glPolygonOffset($factor, $units)
-    Local $aRet = DllCall($__g_hGLDll, "NONE", "glPolygonOffset", $GLfloat, $factor, $GLfloat, $units)
-    If @error<>0 Then Return SetError(@error, @extended, Null)
-EndFunc
-
-Func glPolygonStipple($mask)
-    Local $aRet = DllCall($__g_hGLDll, "NONE", "glPolygonStipple", "PTR", $mask)
-    If @error<>0 Then Return SetError(@error, @extended, Null)
-EndFunc
-
 Func glGetPolygonStipple($mask)
     Local $aRet = DllCall($__g_hGLDll, "NONE", "glGetPolygonStipple", "PTR", $mask)
     If @error<>0 Then Return SetError(@error, @extended, Null)
