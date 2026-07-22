@@ -752,7 +752,7 @@ Func glReadBuffer($mode)
 EndFunc
 
 Func glEnable($cap)
-    Local $aRet = DllCall($__g_hGLDll, "NONE", "glEnable", $cap)
+    Local $aRet = DllCall($__g_hGLDll, "NONE", "glEnable", $GLenum, $cap)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
 
