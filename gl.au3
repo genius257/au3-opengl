@@ -1799,3 +1799,97 @@ Func glInterleavedArrays($format, $stride, $pointer)
     DllCall($__g_hGLDll, "NONE", "glInterleavedArrays", $GLenum, $format, $GLsizei, $stride, "PTR", $pointer)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# Lighting
+#ce
+
+Func glShadeModel($mode)
+    DllCall($__g_hGLDll, "NONE", "glShadeModel", $GLenum, $mode)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightf($light, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glLightf", $GLenum, $light, $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLighti($light, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glLighti", $GLenum, $light, $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightfv($light, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glLightfv", $GLenum, $light, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightiv($light, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glLightiv", $GLenum, $light, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetLightfv($light, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetLightfv", $GLenum, $light, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetLightiv($light, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetLightiv", $GLenum, $light, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightModelf($pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glLightModelf", $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightModeli($pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glLightModeli", $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightModelfv($pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glLightModelfv", $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glLightModeliv($pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glLightModeliv", $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glMaterialf($face, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glMaterialf", $GLenum, $face, $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glMateriali($face, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glMateriali", $GLenum, $face, $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glMaterialfv($face, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glMaterialfv", $GLenum, $face, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glMaterialiv($face, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glMaterialiv", $GLenum, $face, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetMaterialfv($face, $pname, $parms)
+    DllCall($__g_hGLDll, "NONE", "glGetMaterialfv", $GLenum, $face, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetMaterialiv($face, $pname, $parms)
+    DllCall($__g_hGLDll, "NONE", "glGetMaterialiv", $GLenum, $face, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColorMaterial($face, $mode)
+    DllCall($__g_hGLDll, "NONE", "glColorMaterial", $GLenum, $face, $GLenum, $mode)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
