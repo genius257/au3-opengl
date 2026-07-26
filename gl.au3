@@ -1739,3 +1739,63 @@ Func glRectsv($v1, $v2)
     DllCall($__g_hGLDll, "NONE", "glRectsv", "PTR", $v1, "PTR", $v2)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# Vertex Arrays (1.1)
+#ce
+
+Func glVertexPointer($size, $type, $stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glVertexPointer", $GLint, $size, $GLenum, $type, $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glNormalPointer($type, $stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glNormalPointer", $GLenum, $type, $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glColorPointer($size, $type, $stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glColorPointer", $GLint, $size, $GLenum, $type, $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glIndexPointer($type, $stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glIndexPointer", $GLenum, $type, $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexCoordPointer($size, $type, $stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glTexCoordPointer", $GLint, $size, $GLenum, $type, $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glEdgeFlagPointer($stride, $ptr)
+    DllCall($__g_hGLDll, "NONE", "glEdgeFlagPointer", $GLsizei, $stride, "PTR", $ptr)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetPointerv($pname, $params)
+    Local $aRet = DllCall($__g_hGLDll, "NONE", "glGetPointerv", $GLenum, $pname, "PTR*", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[2]
+EndFunc
+
+Func glArrayElement($i)
+    DllCall($__g_hGLDll, "NONE", "glArrayElement", $GLint, $i)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glDrawArrays($mode, $first, $count)
+    DllCall($__g_hGLDll, "NONE", "glDrawArrays", $GLenum, $mode, $GLint, $first, $GLsizei, $count)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glDrawElements($mode, $count, $type, $indices)
+    DllCall($__g_hGLDll, "NONE", "glDrawElements", $GLenum, $mode, $GLsizei, $count, $GLenum, $type, "PTR", $indices)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glInterleavedArrays($format, $stride, $pointer)
+    DllCall($__g_hGLDll, "NONE", "glInterleavedArrays", $GLenum, $format, $GLsizei, $stride, "PTR", $pointer)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
