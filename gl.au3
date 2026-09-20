@@ -1893,3 +1893,85 @@ Func glColorMaterial($face, $mode)
     DllCall($__g_hGLDll, "NONE", "glColorMaterial", $GLenum, $face, $GLenum, $mode)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# Raster functions
+#ce
+
+Func glPixelZoom($xfactor, $yfactor)
+    DllCall($__g_hGLDll, "NONE", "glPixelZoom", $GLfloat, $xfactor, $GLfloat, $yfactor)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelStoref($pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glPixelStoref", $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelStorei($pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glPixelStorei", $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelTransferf($pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glPixelTransferf", $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelTransferi($pName, $param)
+    DllCall($__g_hGLDll, "NONE", "glPixelTransferi", $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelMapfv($map, $mapsize, $values)
+    DllCall($__g_hGLDll, "NONE", "glPixelMapfv", $GLenum, $map, $GLsizei, $mapsize, "PTR", $values)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelMapuiv($map, $mapsize, $values)
+    DllCall($__g_hGLDll, "NONE", "glPixelMapuiv", $GLenum, $map, $GLsizei, $mapsize, "PTR", $values)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPixelMapusv($map, $mapsize, $values)
+    DllCall($__g_hGLDll, "NONE", "glPixelMapusv", $GLenum, $map, $GLsizei, $mapsize, "PTR", $values)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetPixelMapfv($map)
+    Local $aRet = DllCall($__g_hGLDll, "NONE", "glGetPixelMapfv", $GLenum, $map, "PTR", 0)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[2]
+EndFunc
+
+Func glGetPixelMapuiv($map)
+    Local $aRet = DllCall($__g_hGLDll, "NONE", "glGetPixelMapuiv", $GLenum, $map, "PTR", 0)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[2]
+EndFunc
+
+Func glGetPixelMapusv($map)
+    Local $aRet = DllCall($__g_hGLDll, "NONE", "glGetPixelMapusv", $GLenum, $map, "PTR", 0)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[2]
+EndFunc
+
+Func glBitmap($width, $height, $xorig, $yorig, $xmove, $ymove, $bitmap)
+    DllCall($__g_hGLDll, "NONE", "glBitmap", $GLsizei, $width, $GLsizei, $height, $GLfloat, $xorig, $GLfloat, $yorig, $GLfloat, $xmove, $GLfloat, $ymove, "PTR", $bitmap)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glReadPixels($x, $y, $width, $height, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glReadPixels", $GLint, $x, $GLint, $y, $GLsizei, $width, $GLsizei, $height, $GLenum, $format, $GLenum, $type, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glDrawPixels($width, $height, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glDrawPixels", $GLsizei, $width, $GLsizei, $height, $GLenum, $format, $GLenum, $type, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glCopyPixels($x, $y, $width, $height, $type)
+    DllCall($__g_hGLDll, "NONE", "glCopyPixels", $GLint, $x, $GLint, $y, $GLsizei, $width, $GLsizei, $height, $GLenum, $type)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
