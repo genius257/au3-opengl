@@ -1975,3 +1975,27 @@ Func glCopyPixels($x, $y, $width, $height, $type)
     DllCall($__g_hGLDll, "NONE", "glCopyPixels", $GLint, $x, $GLint, $y, $GLsizei, $width, $GLsizei, $height, $GLenum, $type)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# Stenciling
+#ce
+
+Func glStencilFunc($func, $ref, $mask)
+    DllCall($__g_hGLDll, "NONE", "glStencilFunc", $GLenum, $func, $GLint, $ref, $GLuint, $mask)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glStencilMask($mask)
+    DllCall($__g_hGLDll, "NONE", "glStencilMask", $GLuint, $mask)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glStencilOp($fail, $zfail, $zpass)
+    DllCall($__g_hGLDll, "NONE", "glStencilOp", $GLenum, $fail, $GLenum, $zfail, $GLenum, $zpass)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glClearStencil($s)
+    DllCall($__g_hGLDll, "NONE", "glClearStencil", $GLint, $s)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
