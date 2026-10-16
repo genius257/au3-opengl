@@ -1999,3 +1999,137 @@ Func glClearStencil($s)
     DllCall($__g_hGLDll, "NONE", "glClearStencil", $GLint, $s)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# Texture mapping
+#ce
+
+Func glTexGend($coord, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexGend", $GLenum, $coord, $GLenum, $pname, $GLdouble, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexGenf($coord, $pname, $param)
+    DllClose($__g_hGLDll, "NONE", "glTexGenf", $GLenum, $coord, $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexGeni($coord, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexGeni", $GLenum, $coord, $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexGendv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexGendv", $GLenum, $coord, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexGenfv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexGenfv", $GLenum, $coords, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexGeniv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexGeniv", $GLenum, $coord, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexGendv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexGendv", $GLenum, $coord, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexGenfv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexGenfv", $GLenum, $coord, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexGeniv($coord, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexGeniv", $GLenum, $coord, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexEnvf($target, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexEnvf", $GLenum, $target, $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexEnvi($target, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexEnvi", $GLenum, $target, $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexEnvfv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexEnvfv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexEnviv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexEnviv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexEnvfv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexEnvfv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexEnviv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexEnviv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexParameterf($target, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexParameterf", $GLenum, $target, $GLenum, $pname, $GLfloat, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexParameteri($target, $pname, $param)
+    DllCall($__g_hGLDll, "NONE", "glTexParameteri", $GLenum, $target, $GLenum, $pname, $GLint, $param)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexParameterfv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexParameterfv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexParameteriv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glTexParameteriv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexParameterfv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexParameterfv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexParameteriv($target, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexParameteriv", $GLenum, $target, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexLevelParameterfv($target, $level, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexLevelParameterfv", $GLenum, $target, $GLint, $level, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexLevelParameteriv($target, $level, $pname, $params)
+    DllCall($__g_hGLDll, "NONE", "glGetTexLevelParameteriv", $GLenum, $target, $GLint, $level, $GLenum, $pname, "PTR", $params)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexImage1D($target, $level, $internalFormat, $width, $border, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glTexImage1D", $GLenum, $target, $GLint, $level, $GLint, $internalFormat, $GLsizei, $width, $GLint, $border, $GLenum, $format, $GLenum, $type, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexImage2D($target, $level, $internalFormat, $width, $height, $border, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glTexImage2D", $GLenum, $target, $GLint, $level, $GLint, $internalFormat, $GLsizei, $width, $GLsizei, $height, $GLint, $border, $GLenum, $format, $GLenum, $type, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glGetTexImage($target, $level, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glGetTexImage", $GLenum, $target, $GLint, $level, $GLenum, $format, $GLenum, $format, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
