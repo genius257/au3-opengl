@@ -2133,3 +2133,69 @@ Func glGetTexImage($target, $level, $format, $type, $pixels)
     DllCall($__g_hGLDll, "NONE", "glGetTexImage", $GLenum, $target, $GLint, $level, $GLenum, $format, $GLenum, $format, "PTR", $pixels)
     If @error<>0 Then Return SetError(@error, @extended, Null)
 EndFunc
+
+#cs
+# 1.1 functions
+#ce
+
+Func glGenTextures($n, $textures)
+    DllCall($__g_hGLDll, "NONE", "glGenTextures", $GLsizei, $n, "PTR", $textures)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glDeleteTextures($n, $textures)
+    DllCall($__g_hGLDll, "NONE", "glDeleteTextures", $GLsizei, $n, "PTR", $textures)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glBindTexture($target, $texture)
+    DllCall($__g_hGLDll, "NONE", "glBindTexture", $GLenum, $target, $GLuint, $texture)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glPrioritizeTextures($n, $textures, $priorities)
+    DllCall($__g_hGLDll, "NONE", "glPrioritizeTextures", $GLsizei, $n, "PTR", $textures, $priorities)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glAreTexturesResident($n, $textures, $residences)
+    Local $aRet = DllCall($__g_hGLDll, $GLboolean, "glAreTexturesResident", $GLsizei, $n, "PTR", $textures, "PTR", $residences)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[0]
+EndFunc
+
+Func glIsTexture($texture)
+    Local $aRet = DllCall($__g_hGLDll, $GLboolean, "glIsTexture", $GLuint, $texture)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+    Return $aRet[0]
+EndFunc
+
+Func glTexSubImage1D($target, $level, $xoffset, $width, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glTexSubImage1D", $GLenum, $target, $GLint, $level, $GLint, $xoffset, $GLsizei, $width, $GLenum, $format, $GLenum, $type, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glTexSubImage2D($target, $level, $xoffset, $yoffset, $width, $height, $format, $type, $pixels)
+    DllCall($__g_hGLDll, "NONE", "glTexSubImage2D", $GLenum, $target, $GLint, $level, $GLint, $xoffset, $GLint, $yoffset, $GLsizei, $width, $GLsizei, $height, $GLenum, $format, $GLenum, $tyoe, "PTR", $pixels)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glCopyTexImage1D($target, $level, $internalformat, $x, $y, $width, $border)
+    DllCall($__g_hGLDll, "NONE", "glCopyTexImage1D", $GLenum, $target, $GLint, $level, $GLenum, $internalformat, $GLint, $x, $GLint, $y, $GLsizei, $width, $GLint, $border)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glCopyTexImage2D($target, $level, $internalformat, $x, $y, $width, $height, $border)
+    DllCall($__g_hGLDll, "NONE", "glCopyTexImage2D", $GLenum, $target, $GLint, $level, $GLenum, $internalformat, $GLint, $x, $GLint, $y, $GLsizei, $width, $GLsizei, $height, $GLint, $border)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glCopyTexSubImage1D($target, $level, $xoffset, $x, $y, $width)
+    DllCall($__g_hGLDll, "NONE", "glCopyTexSubImage1D", $GLenum, $target, $GLint, $level, $GLint, $xoffset, $GLint, $x, $GLint, $y, $GLsizei, $width)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
+
+Func glCopyTexSubImage2D($target, $level, $xoffset, $yoffset, $x, $y, $width, $height)
+    DllCall($__g_hGLDll, "NONE", "glCopyTexSubImage2D", $GLenum, $target, $GLint, $level, $GLint, $xoffset, $GLint, $yoffset, $GLint, $x, $GLint, $y, $GLsizei, $width, $GLsizei, $height)
+    If @error<>0 Then Return SetError(@error, @extended, Null)
+EndFunc
